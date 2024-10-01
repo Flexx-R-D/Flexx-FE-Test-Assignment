@@ -1,13 +1,10 @@
 export type FlexxTableType = {
   id: number
-  avatar: string
-  fullName: string
-  post: string
-  email: string
-  city: string
-  start_date: string
-  salary: number
-  age: number
-  experience: string
-  status: number
+  transaction_id: string
+  policy_holder: string
+  amount: number
+  method: string
+  status: string
+  upcoming_task: string
+  overdue_task: string
 }
