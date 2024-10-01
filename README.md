@@ -16,19 +16,29 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Completing Flexx-Table: Client-Side Data Loading
 
-## Learn More
+To complete the Flexx-Table implementation, we need to add client-side data loading using the Next.js API endpoint. This task involves the following steps:
 
-To learn more about Next.js, take a look at the following resources:
+1. Create a new API route for the Flexx-Table data if it doesn't already exist.
+2. Implement a fetch function in the client-side component to call the API endpoint.
+3. Use React hooks (useState and useEffect) to manage the data state and trigger the API call.
+4. Update the table component to use the fetched data instead of static data.
+5. Handle loading states and potential errors during the data fetching process.
+6. Ensure the table updates reactively when the data is loaded.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+By completing these steps, we'll have a fully functional Flexx-Table that loads data dynamically from the server, providing a more realistic and scalable solution for data presentation.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Target Page Design
 
-## Deploy on Vercel
+The Flexx-Table implementation should resemble the following design:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+![Flexx-Table Design](./public/images/flexx-table-for-ref.jpg)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This image showcases the intended layout and functionality of the Flexx-Table, including:
+
+- Sortable columns
+- Pagination controls
+- Responsive design for various screen sizes
+
+Refer to this image when implementing the Flexx-Table to ensure the final result matches the desired appearance and functionality.

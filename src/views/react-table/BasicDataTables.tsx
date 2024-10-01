@@ -52,7 +52,7 @@ const columns = [
 const BasicDataTables = () => {
   // States
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [data, setData] = useState(() => [...defaultData])
+  const [data, setData] = useState(() => [])
 
   // Hooks
   const table = useReactTable({
