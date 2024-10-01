@@ -33,6 +33,8 @@ To create the aggregrated data, we need to create a new API route for the Flexx-
 8. Propogate the data to the client-side component via the API call.
 9. Present the data in the top cards.
 
+- Note: Action icons just need to be placeholders.
+
 By completing these steps, we'll have a fully functional Flexx-Table that loads data dynamically from the server, providing a more realistic and scalable solution for data presentation.
 
 ## Target Page Design
