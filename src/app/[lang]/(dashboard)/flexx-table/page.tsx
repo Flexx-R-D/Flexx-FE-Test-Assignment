@@ -1,68 +1,26 @@
-'use client';
-
 // Next Imports
-import { useEffect, useState } from 'react'
+import Link from 'next/link'
 
 // MUI Imports
 import Grid from '@mui/material/Grid'
+import Typography from '@mui/material/Typography'
 
+// Component imports
+import BasicDataTables from '@views/react-table/BasicDataTables'
+import EditableDataTables from '@views/react-table/EditableDataTables'
+import ColumnVisibility from '@views/react-table/ColumnVisibility'
+import RowSelection from '@views/react-table/RowSelection'
 import FlexxTableView from '@views/react-table/FlexxTableView'
-import { useFlexxTable } from './useFlexxTable';
-import FlexxTableCard from './FlexxTableCard';
 
-const Tables = () => {
-  const { columns, defaultData } = useFlexxTable();
-
-  const [data, setData] = useState(defaultData);
-  const [selectedRows, setSelectedRows] = useState({});
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState('');
-
-  const getData = async () => {
-    // Vars
-    setIsLoading(true);
-
-    const res = await fetch(`${process.env.API_URL}/apps/tableData`)
-
-    if (!res.ok) {
-      const errorMessage = 'Failed to fetch invoice data';
-
-      setError(errorMessage);
-      setIsLoading(false);
-      throw new Error(errorMessage);
-    }
-
-    const newData = await res.json();
-
-    setData(newData);
-    setIsLoading(false);
-  };
-
-  useEffect(() => {
-    // getData();
-  }, []);
-
+const Tables = async () => {
   return (
     <Grid container spacing={6}>
       <Grid item xs={12}>
-        <FlexxTableCard />
+        <Typography variant='h5'>React Table</Typography>
       </Grid>
 
       <Grid item xs={12}>
-        {isLoading ? (
-          <div>Loading...</div>
-        ) : error ? (
-          <div>{error}</div>
-        ) : (
-          <FlexxTableView
-            columns={columns}
-            data={data}
-            rowSelection={selectedRows}
-            setRowSelection={setSelectedRows}
-            globalFilter={''}
-            setGlobalFilter={() => { }}
-          />
-        )}
+        <FlexxTableView />
       </Grid>
     </Grid>
   )
