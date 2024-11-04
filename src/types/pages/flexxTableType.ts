@@ -8,3 +8,10 @@ export type FlexxTableType = {
   upcoming_task: string
   overdue_task: string
 }
+
+export type FlexxTableFinancialSummaryType = {
+  payments: number
+  pending_payments: number
+  payouts: number
+  pending_payouts: number
+}
