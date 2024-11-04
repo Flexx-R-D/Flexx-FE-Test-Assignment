@@ -1,0 +1,41 @@
+:root {
+  --light-green-color: #e8f6da;
+  --light-purple-color: #f2d7fa;
+  --purple-color: #a563f5;
+  --green-color: #799b6c;
+}
+
+.header-card-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 10%;
+}
+
+.green-btn {
+  background-color: var(--light-green-color);
+}
+
+.purple-btn {
+  background-color: var(--light-purple-color);
+}
+
+.header-card-button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.header-card-button:active {
+  opacity: 0.6;
+}
+
+.header-card-icon {
+  font-size: 20px;
+}
+
+.green-icon {
+  color: var(--green-color);
+}
+
+.purple-icon {
+  color: var(--purple-color);
+}
