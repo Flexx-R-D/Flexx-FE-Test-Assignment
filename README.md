@@ -50,3 +50,8 @@ This image showcases the intended layout and functionality of the Flexx-Table, i
 - Responsive design for various screen sizes
 
 Refer to this image when implementing the Flexx-Table to ensure the final result matches the desired appearance and functionality.
+
+
+## Submission:
+Development is done in a feature branch created by you.
+Then, create a Pull Requst containing your changes.
